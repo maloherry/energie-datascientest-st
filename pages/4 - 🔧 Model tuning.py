@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from joblib import load
+from xgboost import XGBRegressor
 
 st.title("Modélisation - model tuning")
 

@@ -5,6 +5,7 @@ from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from joblib import load
+from xgboost import XGBRegressor
 
 plt.style.use('dark_background')
 
