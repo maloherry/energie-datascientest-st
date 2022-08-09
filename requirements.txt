@@ -4,4 +4,4 @@ numpy
 seaborn
 sklearn
 joblib
-xgboost
+xgboost==1.5.*
