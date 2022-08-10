@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from joblib import load
 from xgboost import XGBRegressor
+params = {'text.color':'white', 'xtick.color':'white', 'ytick.color':'white', 'figure.facecolor':'#0e1117', 'axes.facecolor':'#0e1117'} 
+plt.rcParams.update(params)
 
 st.title("Modélisation - model tuning")
 model_h = load('data/model_h.joblib') 

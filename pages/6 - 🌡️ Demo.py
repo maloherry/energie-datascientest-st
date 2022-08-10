@@ -6,7 +6,8 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from joblib import load
 from xgboost import XGBRegressor
-#plt.style.use('dark_background')
+params = {'text.color':'white', 'xtick.color':'white', 'ytick.color':'white', 'figure.facecolor':'#0e1117', 'axes.facecolor':'#0e1117'} 
+plt.rcParams.update(params)
 
 data_month = pd.read_pickle('data/data_month.pkl')
 data_week = pd.read_pickle('data/data_week.pkl')
