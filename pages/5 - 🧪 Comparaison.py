@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from joblib import load
 from xgboost import XGBRegressor
 
-plt.style.use('dark_background')
+#plt.style.use('dark_background')
 
 
 data_month = pd.read_pickle('data/data_month.pkl')
@@ -58,13 +58,13 @@ if pas_sel == 'Mensuel':
     axs = axs.ravel()
     for n, i in enumerate(comp.reg.unique()):
         data = comp[comp.reg == i]
-        axs[n].plot(data.datetime, data.points_observes, c='green')
-        axs[n].plot(data.datetime, data.points_predits, c='red')
+        axs[n].plot(data.datetime, data.points_observes, c='#4DBD4D')
+        axs[n].plot(data.datetime, data.points_predits, c='#DE5B45')
         axs[n].title.set_text(i)
         axs[n].set_xticks(axs[n].get_xticks()[::2])
         plt.setp(axs[n].get_xticklabels()[-1], visible=False)
 
-    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.1))
+    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.95))
     st.pyplot(fig)
 
 if pas_sel == 'Hebdomadaire':
@@ -88,13 +88,13 @@ if pas_sel == 'Hebdomadaire':
     axs = axs.ravel()
     for n, i in enumerate(comp.reg.unique()):
         data = comp[comp.reg == i]
-        axs[n].plot(data.datetime, data.points_observes, c='green')
-        axs[n].plot(data.datetime, data.points_predits, c='red')
+        axs[n].plot(data.datetime, data.points_observes, c='#4DBD4D')
+        axs[n].plot(data.datetime, data.points_predits, c='#DE5B45')
         axs[n].title.set_text(i)
         axs[n].set_xticks(axs[n].get_xticks()[::2])
         plt.setp(axs[n].get_xticklabels()[-1], visible=False)
 
-    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.1))
+    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.95))
     st.pyplot(fig)
 
 if pas_sel == 'Horaire':
@@ -118,13 +118,13 @@ if pas_sel == 'Horaire':
     axs = axs.ravel()
     for n, i in enumerate(comp.reg.unique()):
         data = comp[comp.reg == i]
-        axs[n].plot(data.datetime, data.points_observes, c='green')
-        axs[n].plot(data.datetime, data.points_predits, c='red')
+        axs[n].plot(data.datetime, data.points_observes, c='#4DBD4D')
+        axs[n].plot(data.datetime, data.points_predits, c='#DE5B45')
         axs[n].title.set_text(i)
         axs[n].set_xticks(axs[n].get_xticks()[::2])
         plt.setp(axs[n].get_xticklabels()[-1], visible=False)
 
-    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.1))
+    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.95))
     st.pyplot(fig)
 
 if pas_sel == 'Horaire sur une semaine':
@@ -149,10 +149,10 @@ if pas_sel == 'Horaire sur une semaine':
     axs = axs.ravel()
     for n, i in enumerate(comp.reg.unique()):
         data = comp[comp.reg == i]
-        axs[n].plot(data.datetime, data.points_observes, c='green')
-        axs[n].plot(data.datetime, data.points_predits, c='red')
+        axs[n].plot(data.datetime, data.points_observes, c='#4DBD4D')
+        axs[n].plot(data.datetime, data.points_predits, c='#DE5B45')
         axs[n].title.set_text(i)
         axs[n].set_xticks(axs[n].get_xticks()[::2])
 
-    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.1))
+    fig.legend(['Valeurs observées', 'Valeurs prédites'], bbox_to_anchor=(0., 0., 0.5, 0.95))
     st.pyplot(fig)

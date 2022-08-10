@@ -3,10 +3,13 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-plt.style.use('dark_background')
+params = {'text.color':'white', 'xtick.color':'white', 'ytick.color':'white', 'figure.facecolor':'#0e1117', 'axes.facecolor':'#0e1117'} 
+plt.rcParams.update(params)
 
 st.title("Analyse exploratoire")
 st.header("Visualisation des variations mensuelles sur une année (moyenne)")
+
+st.subheader('Échelle nationale')
 data_month_viz = pd.read_pickle('data/data_month_viz.pkl')
 fig = plt.figure(figsize=(16,10))
 colors = sns.color_palette("RdBu", 7)
@@ -19,6 +22,8 @@ plt.ylabel('MW(1/2h)')
 plt.xlabel('Mois')
 plt.xticks(np.arange(1,13,1), rotation=40);
 st.pyplot(fig)
+
+st.subheader('Échelle régionale')
 
 data_month_reg = pd.read_pickle('data/data_month_reg_viz.pkl')
 
@@ -41,6 +46,7 @@ st.pyplot(fig)
 
 st.header("Visualisation des variations horaires sur une journée (moyenne)")
 data_hour_viz = pd.read_pickle('data/data_hour_viz.pkl')
+st.subheader('Échelle nationale')
 
 fig = plt.figure(figsize=(16,10))
 labels = ['Nucleaire','Thermique','Eolien','Solaire','Hydraulique','Bioénergies']
@@ -54,6 +60,7 @@ plt.xticks(np.arange(0,24,1), rotation=40);
 st.pyplot(fig)
 
 data_hour_reg = pd.read_pickle('data/data_hour_reg_viz.pkl')
+st.subheader('Échelle régionale')
 
 reg_option_h = st.selectbox(
      'Sélectionnez la région à afficher',

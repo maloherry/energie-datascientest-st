@@ -6,7 +6,9 @@ from joblib import load
 from xgboost import XGBRegressor
 
 st.title("Modélisation - model tuning")
-
+model_h = load('data/model_h.joblib') 
+model_w = load('data/model_w.joblib') 
+model_m = load('data/model_m.joblib') 
 st.markdown("""
 Le travail effectué jusqu’à présent concerne des modèles testés avec leurs paramètres par défaut. On cherche maintenant à optimiser ces modèles en cherchant les meilleurs hyperparamètres pour nos données.
 
@@ -71,14 +73,7 @@ Meilleurs paramètres (données mensuelles) : {'criterion': 'squared_error'}
 
 st.markdown("Le XGB Regressor est le modèle qui obtient les meilleurs scores sur les trois échelles temporelles. Il se base très largement (comme les autres modèles), sur la population et la température :")
 
-model_h = load('data/model_h.joblib') 
-model_w = load('data/model_w.joblib') 
-model_m = load('data/model_m.joblib') 
 
-columns = ['reg_code', 'hum', 'temp', 'vent', 'prec', 'pop', 'puiss_edf',
-       'confinement', 'feries', 'year', 'month', 'week', 'weekday', 'day',
-       'hour']
-plt.style.use('dark_background')
 fig = plt.figure(figsize = (22,10))
 plt.subplot(1,3,1)
 pd.Series(model_h.feature_importances_, index=['reg_code', 'hum', 'temp', 'vent', 'prec', 'pop', 'puiss_edf', 'confinement', 'feries', 'year', 'month', 'week', 'weekday', 'day', 'hour']).sort_values(ascending = False).plot(kind = 'barh')
