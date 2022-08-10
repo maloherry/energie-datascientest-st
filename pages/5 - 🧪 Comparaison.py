@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 from joblib import load
 from xgboost import XGBRegressor
 
-#plt.style.use('dark_background')
-
+st.title('Comparaison données prédites/données observées')
 
 data_month = pd.read_pickle('data/data_month.pkl')
 data_week = pd.read_pickle('data/data_week.pkl')

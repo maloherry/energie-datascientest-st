@@ -11,7 +11,7 @@ st.markdown("Une fois la phase exploratoire terminée, on garde seulement la var
 st.markdown(
     """
 Nous ajoutons plusieurs variables :
-* Des données **météorologiques** (humidité, température, vitesse du vent précipitations dans la dernière heure) obtenues en faisant la moyenne des observations des stations d'une région à partir de la [base SYNOP](file:///home/maloherry/Dropbox/datascientest/projet_energie/rapport/)
+* Des données **météorologiques** (humidité, température, vitesse du vent, précipitations dans la dernière heure) obtenues en faisant la moyenne des observations des stations d'une région à partir de la [base SYNOP](file:///home/maloherry/Dropbox/datascientest/projet_energie/rapport/)
 * Des données **démographiques** : les chiffres annuels de la population [fournis par l'INED](https://www.ined.fr/fr/tout-savoir-population/chiffres/france/structure-population/regions-departements/) (Institut national d'études démographiques)
 * La **puissance installée** en centrales nucléaires et thermiques [gérées par EDF](https://www.data.gouv.fr/fr/datasets/centrales-de-production-nucleaire-et-thermique-a-flamme-de-edf-sa/)
 * Une variable **confinement** qui prend la valeur de 1 les jours du premier confinement (du 17 mars au 10 mai 2020) pour prendre en compte la baisse d'activité économique importante qu'il a causé

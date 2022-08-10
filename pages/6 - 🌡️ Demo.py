@@ -30,7 +30,7 @@ dicreg = {11 : 'Île-de-France',
           93 : 'Provence-Alpes-Côte d\'Azur',
           94 : 'Corse'
           }
-st.title('Prédictions selon la température')
+st.title('Prédictions selon la température et la population')
 
 pas_sel = st.selectbox(
      'Sélectionnez le pas temporel :',
