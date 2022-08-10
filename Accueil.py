@@ -13,3 +13,4 @@ st.markdown("A partir des données de consommation et de production en temps ré
 
 st.markdown("Un modèle suffisamment précis permet au régulateur de piloter la mise en route des différentes capacités de production électrique disponibles, les échanges entre régions et si nécessaire, d’acheter de l’énergie aux pays voisins.")
 
+st.markdown('_Réalisé par Aymen Nsira & Malo Herry, dans le cadre du bootcamp Data Analyst de Datascientest (juin 2022)._')
